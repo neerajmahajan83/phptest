@@ -1,4 +1,4 @@
-1) Lead & Trial Module: Handles the business logic for "1 Free Trial Per Lead" and the 12-hour rescheduling constra# int.
+1) Lead & Trial Module: Handles the business logic for "1 Free Trial Per Lead" and the 12-hour rescheduling constraint.
 
 2) Scheduling Engine: The "Brain" that cross-references trainer_availability and member_membership_status in real-time before confirming a slot.
 
