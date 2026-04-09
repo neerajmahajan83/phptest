@@ -1,1 +1,9 @@
-SystemArchitectureDesign.png
+Lead & Trial Module: Handles the business logic for "1 Free Trial Per Lead" and the 12-hour rescheduling constra# int.
+
+Scheduling Engine: The "Brain" that cross-references trainer_availability and member_membership_status in real-time before confirming a slot.
+
+Laravel Horizon (Redis): This is critical for DLF Thrive. It ensures that if the WhatsApp API is slow or down, the Staff CRM doesn't freeze. It handles retries automatically.
+
+Scheduled Tasks (Cron): A heartbeat that runs every minute to find memberships expiring in 7 days or trials starting in 2 hours, pushing them into the notification queue.
+
+PostgreSQL: Chosen over MySQL for its superior handling of complex relational data and partial-payment ledgering (using JSONB for audit logs).
